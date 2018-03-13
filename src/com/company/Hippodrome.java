@@ -16,11 +16,18 @@ public class Hippodrome {
     }
 
     private void move(){
-
+        for(Horse h : horses){
+            h.move();
+        }
     }
 
     private void print(){
-
+        for(Horse h : horses){
+            h.print();
+        }
+        for(int i = 0; i < 10; i++){
+            System.out.println();
+        }
     }
 
     private void run(){
@@ -42,5 +49,7 @@ public class Hippodrome {
         game.horses.add(new Horse("Third", 3,0));
         game.horses.add(new Horse("Fourth", 3,0));
         game.horses.add(new Horse("Fifth", 3,0));
+
+        game.run();
     }
 }
