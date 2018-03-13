@@ -44,11 +44,11 @@ public class Hippodrome {
 
     public static void main(String[] args) {
         game = new Hippodrome(new ArrayList<>());
-        game.horses.add(new Horse("First", 3,0));
-        game.horses.add(new Horse("Second", 3,0));
-        game.horses.add(new Horse("Third", 3,0));
-        game.horses.add(new Horse("Fourth", 3,0));
-        game.horses.add(new Horse("Fifth", 3,0));
+        game.horses.add(new Horse("First", 3d,0d));
+        game.horses.add(new Horse("Second", 3d,0d));
+        game.horses.add(new Horse("Third", 3d,0d));
+        game.horses.add(new Horse("Fourth", 3d,0d));
+        game.horses.add(new Horse("Fifth", 3d,0d));
 
         game.run();
     }
