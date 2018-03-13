@@ -42,6 +42,25 @@ public class Hippodrome {
         }
     }
 
+    public Horse getWinner(){
+        Horse winner = new Horse("Temp", 0d, 0d);
+        double maxDistance = 0d;
+
+        for(Horse h : horses){
+            if (h.getDistance() > maxDistance){
+                winner = h;
+                maxDistance = h.getDistance();
+            }
+        }
+        return winner;
+    }
+
+    public void printWinner(){
+        System.out.printf("Winner is %s!", game.getWinner().getName());
+    }
+
+
+
     public static void main(String[] args) {
         game = new Hippodrome(new ArrayList<>());
         game.horses.add(new Horse("First", 3d,0d));
@@ -51,5 +70,6 @@ public class Hippodrome {
         game.horses.add(new Horse("Fifth", 3d,0d));
 
         game.run();
+        game.printWinner();
     }
 }
